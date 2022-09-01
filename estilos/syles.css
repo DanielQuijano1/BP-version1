@@ -1,0 +1,435 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Uchen', serif;
+    letter-spacing: .06em;
+}
+
+.lineaSeparadoraGris{
+    background:#2c2c2c ;
+    width: 90%;
+    height: 1px;
+    display: flex;
+    margin-left: 5%;
+}
+
+.cuerpoPrincipal {
+    background-color: #000;
+    width: 100%;
+    display: block;
+}
+
+/* -------------------------------------- 
+            header de la pagina
+-----------------------------------------*/
+
+.logo {
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    font-size: 1.5em;
+    align-self: center;
+    margin-bottom: 0;
+    padding-left: 20%;
+}
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Uchen', serif;
+    letter-spacing: .06em;
+}
+
+.encabezado {
+    width: 100%;
+    height: 100px;
+    color: #fff;
+    background: #000;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 35%, rgba(47,47,47,1) 100%);
+    border-bottom: #ce181e 2px solid;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.navegadorDropdown {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    transition: height .5s, width .5s, background-color .5s;
+    transition-delay: 0s, .75s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.navegadorDropdown.active {
+    width: 300px;
+    right: 20px;
+    height: 400px;
+    transition: width .5s, height .5s, background-color .5s;
+    transition-delay: 0s, .75s;
+    background: #000;
+    box-shadow: 0 25px 35px rgba(146, 145, 145, 0.1);
+    border-bottom: rgba(109, 0, 0, 0.849) 1px solid;
+    border-left: rgba(109, 0, 0, 0.849) 1px solid;
+    border-right: rgba(109, 0, 0, 0.849) 1px solid;
+}
+
+.navegadorDropdown .menuDropdown {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navegadorDropdown .menuDropdown::before {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #b1b0b0;
+    transform: translateY(-10px);
+    box-shadow: 0 10px #b1b0b0;
+    transition: .5s;
+}
+
+.navegadorDropdown .menuDropdown::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #b1b0b0;
+    transform: translateY(10px);
+    transition: .5s;
+}
+
+.navegadorDropdown.active .menuDropdown::before {
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #b1b0b0;
+}
+
+.navegadorDropdown.active .menuDropdown::after {
+    transform: translateY(0px) rotate(-45deg);
+    box-shadow: 0 0 #b1b0b0;
+}
+
+.menuDropdownLista {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+.menuDropdownLista li {
+    list-style: none;
+}
+
+.menuDropdownLista li a {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1em;
+    gap: 10px;
+    text-decoration: none;
+    color: #555;
+}
+
+.menuDropdownLista li a:hover {
+    color: #4e65ff;
+}
+
+.menuDropdownLista li a svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* --------------------------------------
+                BOTON WHATSAPP
+---------------------------------------*/
+
+.btn-wsp {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 30px;
+    background: #0df053;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
+    z-index: 100;
+}
+
+.btn-wsp:hover {
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+
+/* --------------------------------------
+                main
+---------------------------------------*/
+
+video {
+    border-top: #000 5px solid;
+    width: 100%;
+    padding-bottom: 5px;
+    border-bottom: #ce181e 2px solid;
+}
+
+
+/*-------------------------------------------------
+            PAGINA CONTACTOS
+------------------------------------------------*/
+.tituloContacto {
+    color: #b1b0b0;
+    font-size: .8rem;
+    text-align: center;
+    padding-top: 15px;
+    font-weight: 100;
+}
+
+.tituloContacto div {
+    letter-spacing: .3em;
+}
+
+.boxNegroBordeRojo {
+    width: 90%;
+    margin: auto;
+    padding: 20PX 0px;
+    border-radius: 5px;
+    border: 1px solid #ce181e;
+    background: radial-gradient(circle at 20% 100%,
+            #000 20%,
+            #010101 40%,
+            #050505 50%,
+            rgba(131, 131, 131, 0.171) 100%);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.boxRojo{
+    width: 250px;
+    margin: 30px auto;
+    padding: 15px 0px;
+    background: #ce181e;
+    text-align: center;
+}
+
+.turnos{
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*   LOGO INSTAGRAM  */
+.instagram {
+    height: 5rem;
+    width: 5rem;
+    background: radial-gradient(circle at 33% 100%,
+            #fed373 4%,
+            #f15245 30%,
+            #d92e7f 62%,
+            #515ecf 85%);
+    border-radius: 30%;
+    position: relative;
+}
+
+.instagram::before {
+    content: '';
+    border: .25rem solid #fff;
+    border-radius: 30%;
+    width: 3.125rem;
+    height: 3.125rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.instagram::after {
+    content: '';
+    border: .25rem solid #fff;
+    border-radius: 100%;
+    width: 1.25rem;
+    height: 1.25rem;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.instagram span {
+    content: '';
+    border: .25rem solid #fff;
+    border-radius: 100%;
+    width: 0;
+    height: 0;
+    right: 1.25rem;
+    position: absolute;
+    margin: auto;
+    top: 1.25rem;
+}
+
+/*      LOGO FACEBOOK       */
+
+#first,
+#second,
+#third,
+#fix_f,
+#fix_s,
+#fix_t {
+    position: relative;
+}
+
+#facebook,
+#second,
+#fix_s,
+#fix_t {
+    background-color: #385998;
+}
+
+#fix_s,
+#fix_t {
+    width: 30px;
+    height: 10px;
+}
+
+#first,
+#third,
+#fix_f {
+    background-color: #fff;
+}
+
+#facebook {
+    padding: 0;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 30%;
+    overflow: hidden;
+}
+
+#first{
+    width: 1.6rem;
+    height: 4rem;
+    left: 2.3rem;
+    top: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+#second{
+    width: 1.5rem;
+    height: 3.5rem;
+    left: 3rem;
+    top: -2.4rem;
+    border-top-left-radius: .5rem;
+}
+
+#third{
+    width: 1.7rem;
+    height: .6rem;
+    top: -4.9rem;
+    left: 1.7rem;
+}
+
+#fix_f{
+    width: .6rem;
+    height: .6rem;
+    top: -5.7rem;
+    left: 2.85rem;
+    transform: rotate(7deg);
+}
+
+#fix_s{
+    top: -6.67rem;
+    left: 3rem;
+}
+
+#fix_t{
+    top: -6.16rem;
+    left: 3rem;
+}
+
+/* BANNER PROMOS */
+#bannerPromos{
+    width: 95vw;
+    scroll-snap-type: x mandatory;
+    display: inline-block;
+    white-space: nowrap;
+    height: 145px;
+    margin-left: 2%;
+    overflow: scroll;
+}
+
+#bannerPromos .caja{
+    width: 350px;
+    height: 100px;
+    margin: 5px 2px 10px 2px;
+    border-radius: 3px;
+    display: inline-block;
+    scroll-snap-align: center;
+}
+
+#bannerPromos .caja1{
+    background-color: #0df053;
+}
+
+#bannerPromos .caja2{
+    background-color: #510df0;
+}
+
+#bannerPromos .caja3{
+    background-color: #0dbbf0;
+}
+
+.direccionPelu{
+    color: #b1b0b0;
+    margin-left: 5%;
+    padding: 50px 0;
+    font-weight: 900;
+    letter-spacing: .2em;
+}
+
+.fuente300Rojo a{
+    color: #ce181e;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: .15em;
+}
+
+.margenSuperiorInferior{
+    margin: 20px 0px 50px 0px;
+}
+
+footer{
+    background: #050505;
+    padding: 20px 0px 30px 5%;
+    margin-top: 3px;
+}
+.pieDePagina{
+    font-size: .75rem;
+    color: #b1b0b0;
+}
