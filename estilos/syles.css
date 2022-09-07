@@ -38,6 +38,21 @@ h1{
     letter-spacing: .06em;
 }
 
+.logo::before{
+    content: "ECO FRIENDLY";
+    color: #0df053;
+    position: absolute;
+    top: 20px;
+    right: 90px;
+    font-size: 10px;
+    letter-spacing: .35rem;
+}
+
+.logo::after{
+    
+}
+
+
 .encabezado {
     width: 100%;
     height: 100px;
