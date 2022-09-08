@@ -35,7 +35,7 @@
     position: relative;
 }
 
-h1{
+.logo h1{
     font-family: 'Tiro Devanagari Hindi', serif;
     font-weight: 400;
     letter-spacing: .06em;
@@ -181,8 +181,8 @@ h1{
 
 .btn-wsp {
     position: fixed;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     line-height: 55px;
     bottom: 30px;
     right: 30px;
