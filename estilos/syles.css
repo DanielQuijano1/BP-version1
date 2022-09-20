@@ -181,18 +181,23 @@
 
 .btn-wsp {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    line-height: 55px;
+    width: 70px;
+    height: 70px;
     bottom: 30px;
     right: 30px;
     background: #0df053;
     color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, .3);
+    border-radius: 50%;
     z-index: 100;
+    display: block;
+}
+
+.btn-wsp svg{
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 12.5px;
+    left: 12.5px;
 }
 
 .btn-wsp:hover {
@@ -207,7 +212,7 @@
 
 video {
     border-top: #000 5px solid;
-    width: 100%;
+    width: 100% ;
     padding-bottom: 5px;
     border-bottom: #ce181e 2px solid;
 }
@@ -234,12 +239,7 @@ video {
     margin: auto;
     padding: 20PX 0px;
     border-radius: 5px;
-    border: 1px solid #ce181e;
-    background: radial-gradient(circle at 20% 100%,
-            #000 20%,
-            #010101 40%,
-            #050505 50%,
-            rgba(131, 131, 131, 0.171) 100%);
+   
     margin-bottom: 30px;
     display: flex;
     flex-direction: row;
@@ -411,6 +411,10 @@ video {
 /*--------------------------------
          BANNER PROMOS
 --------------------------------- */
+.bannerPromos{
+    margin-left: -100%;
+}
+
 #bannerPromos{
     width: 95vw;
     scroll-snap-type: x mandatory;
@@ -485,4 +489,8 @@ footer{
 .marcas img{
     width: 80px;
     height: auto;
+}
+
+p{
+    color: #b1b0b0;
 }
